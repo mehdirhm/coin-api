@@ -76,7 +76,7 @@ const CoinDetails: React.FC = () => {
     >
       <Header backColor="#e3c1fef4" color="#d7af00" />
       <div className="mt-[30px] ">
-        <div className="flex w-[100vw] flex-col justify-between min-h-[90vh]">
+        <div className="flex w-[100vw] flex-col justify-between min-h-[85vh]">
           <div className="flex justify-center">
             <img src={coinDetails?.image.large} alt="" />
           </div>
