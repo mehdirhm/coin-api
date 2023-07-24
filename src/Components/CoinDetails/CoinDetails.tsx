@@ -168,7 +168,7 @@ const CoinDetails: React.FC = () => {
               </span>
             </div>
           </div>
-          <div className="flex flex-row w-[100vw]  justify-between p-2  absolute bottom-4">
+          <div className="flex flex-row w-[100vw]  justify-between p-2  relative mt-[400px] bottom-4">
             <Link to="/">
               <button className="bg-[#ffb812fa] font-bold flex text-[#fefefe] h-[50px] items-center shadow-lg justify-center rounded w-[150px]">
                 Home Page
