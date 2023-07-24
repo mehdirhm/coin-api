@@ -76,7 +76,7 @@ const CoinDetails: React.FC = () => {
     >
       <Header backColor="#e3c1fef4" color="#d7af00" />
       <div className="mt-[30px] ">
-        <div className="flex w-[100vw] flex-col justify-between h-[70vh]">
+        <div className="flex w-[100vw] flex-col justify-between min-h-[90vh]">
           <div className="flex justify-center">
             <img src={coinDetails?.image.large} alt="" />
           </div>
@@ -168,7 +168,7 @@ const CoinDetails: React.FC = () => {
               </span>
             </div>
           </div>
-          <div className="flex flex-row w-[100vw]  justify-between p-2  relative mt-[150px] bottom-4">
+          <div className="flex flex-row w-[100vw]  justify-between p-2  relative bottom ">
             <Link to="/">
               <button className="bg-[#ffb812fa] font-bold flex text-[#fefefe] h-[50px] items-center shadow-lg justify-center rounded w-[150px]">
                 Home Page
