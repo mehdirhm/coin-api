@@ -111,7 +111,7 @@ const CoinDetails: React.FC = () => {
             }}
             className="flex justify-around p-4 flex-row mr-[20px]"
           >
-            <div className="flex rounded-md flex-col justify-center gap-5 w-[300px] h-[150px] bg-[#ffc21b] items-center">
+            <div className="flex rounded-md flex-col justify-center gap-5 w-[250px] h-[110px] bg-[#ffc21b] items-center">
               <h1
                 style={{
                   color: theme === "light" ? "#3c0781e8" : "#ffffff",
@@ -130,7 +130,7 @@ const CoinDetails: React.FC = () => {
               </span>
             </div>
 
-            <div className="flex gap-5 rounded-md w-[200px] h-[150px] bg-[#ffc21b] flex-col justify-center items-center">
+            <div className="flex gap-5 rounded-md w-[150px] h-[110px] bg-[#ffc21b] flex-col justify-center items-center">
               <h1
                 style={{
                   color: theme === "light" ? "#3c0781e8" : "#ffffff",
@@ -153,7 +153,7 @@ const CoinDetails: React.FC = () => {
               style={{
                 color: theme === "light" ? "#3c0781e8" : "#ffffff",
               }}
-              className="flex w-[200px] gap-5  rounded-md bg-[#ffc21b] h-[150px] flex-col justify-center items-center"
+              className="flex w-[150px] gap-5  rounded-md bg-[#ffc21b] h-[110px] flex-col justify-center items-center"
             >
               <h1
                 style={{
