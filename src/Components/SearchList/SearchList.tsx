@@ -161,7 +161,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
     return (
         <div style={{
           backgroundColor: theme === 'light' ? '#e3c1fef4' : '#282727',
-        }} className='flex flex-col'>
+        }} className='flex flex-col items-center'>
             <Header backColor='#e3c1fef4' color='#d7af00'/>
             <div className={`${styles.header} flex flex-col justify-center items-center gap-2`}>
               <div>
@@ -177,7 +177,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
               </div>
 
             </div>
-            <ul className='flex max-w-[1600px] gap-8 flex-col mt-12 items-center justify-between text-black' style={{
+            <ul className='flex max-w-[1500px]  gap-8 flex-col mt-12 items-center justify-between text-black' style={{
                 direction: 'ltr',
             }}>
                 <div className='flex justify-center text-[22px] text-[#ffffff]'>
