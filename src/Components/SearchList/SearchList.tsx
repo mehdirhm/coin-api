@@ -177,7 +177,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
               </div>
 
             </div>
-            <ul className='flex max-w-[1400px]  gap-8 flex-col mt-12 items-center justify-between text-black' style={{
+            <ul className='flex gap-8 flex-col mt-12 items-center justify-between text-black' style={{
                 direction: 'ltr',
             }}>
                 <div className='flex justify-center text-[22px] text-[#ffffff]'>
