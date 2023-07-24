@@ -60,7 +60,7 @@ const CoinDetails: React.FC = () => {
         style={{
           backgroundColor: theme === "light" ? "#e3c1fef4" : "#282727",
         }}
-        className="flex justify-center w-[100vw]"
+        className="flex justify-center h-[100vh] w-[100vw]"
       >
         Loading...
       </div>

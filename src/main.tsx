@@ -21,11 +21,10 @@ const router = createBrowserRouter([
     element: <CoinDetails />,
   },
 ]);
-
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeContextProvider>
-      <RouterProvider router={router} />
+      <RouterProvider  router={router} />
     </ThemeContextProvider>
   </React.StrictMode>
 );

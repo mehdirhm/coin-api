@@ -70,10 +70,10 @@ const SearchList: FC = (): JSX.Element => {
           );
     
           if (exactMatch) {
-            setSearchResults([exactMatch]); // نتیجه جستجو را در searchResults قرار دهید
-            updateLocalStorage([exactMatch]); // اضافه کردن نتیجه جستجو به localStorage
+            setSearchResults([exactMatch]);   
+            updateLocalStorage([exactMatch]);     
           } else {
-            setSearchResults([]); // اگر نتیجه‌ای یافت نشد، searchResults را خالی کنید
+            setSearchResults([]); 
           }
           setSearchTerm('')
         //   setStatus(!status)
@@ -161,7 +161,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
     return (
         <div style={{
           backgroundColor: theme === 'light' ? '#e3c1fef4' : '#282727',
-        }} className='flex flex-col w-[100vw] items-center'>
+        }} className='flex flex-col w-[100vw] min-h-[100vh]  items-center'>
             <Header backColor='#e3c1fef4' color='#d7af00'/>
             <div className={`${styles.header} flex flex-col justify-center items-center gap-2`}>
               <div>
@@ -177,7 +177,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
               </div>
 
             </div>
-            <ul className='flex gap-8 flex-col mt-12 items-center justify-between text-black' style={{
+            <ul className='flex gap-8 flex-col mt-12 items-center justify-between  text-black' style={{
                 direction: 'ltr',
             }}>
                 <div className='flex justify-center text-[22px] text-[#ffffff]'>
@@ -188,6 +188,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
 
     <input placeholder='Serach' style={{
       backgroundColor: theme === 'light' ? '#e3c1fef4' : '#282727',
+      color: theme === 'light' ? '#370061' : '#ffffff'
     }} onChange={handleSearch} onKeyDown={handleEnter} className=' flex justify-center  min-w-[1320px] border bg-[#323232] text-[#ffffff] p-2 rounded' type="text" name="" value={searchTerm} id="" />
 <li className='flex p-2 bg-[#ffc928]  flex-row items-center gap-52'>
                      <div   className='flex flex-row gap-2 w-[150px] '>
