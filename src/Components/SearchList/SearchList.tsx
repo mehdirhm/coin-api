@@ -161,7 +161,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
     return (
         <div style={{
           backgroundColor: theme === 'light' ? '#e3c1fef4' : '#282727',
-        }} className='flex flex-col items-center'>
+        }} className='flex flex-col w-[100vw] items-center'>
             <Header backColor='#e3c1fef4' color='#d7af00'/>
             <div className={`${styles.header} flex flex-col justify-center items-center gap-2`}>
               <div>
@@ -188,9 +188,9 @@ const updateLocalStorage = (newResults: Coin[]) => {
 
     <input placeholder='Serach' style={{
       backgroundColor: theme === 'light' ? '#e3c1fef4' : '#282727',
-    }} onChange={handleSearch} onKeyDown={handleEnter} className=' flex justify-center  min-w-[1470px] border bg-[#323232] text-[#ffffff] p-2 rounded' type="text" name="" value={searchTerm} id="" />
+    }} onChange={handleSearch} onKeyDown={handleEnter} className=' flex justify-center  min-w-[1320px] border bg-[#323232] text-[#ffffff] p-2 rounded' type="text" name="" value={searchTerm} id="" />
 <li className='flex p-2 bg-[#ffc928]  flex-row items-center gap-52'>
-                     <div   className='flex flex-row gap-2 w-[200px] '>
+                     <div   className='flex flex-row gap-2 w-[150px] '>
                     
                        <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
@@ -201,14 +201,14 @@ const updateLocalStorage = (newResults: Coin[]) => {
                     </div>
 
 
-                    <div className=' flex justify-center w-[300px]'>
+                    <div className=' flex justify-center w-[250px]'>
                     <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
                     }} className='text-[#ffffff]'>Price</span>
 
                     </div>
 
-                    <div  className='flex justify-center  w-[200px]'>
+                    <div  className='flex justify-center  w-[150px]'>
                     <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
                     }} className='text-[#ffffff]'>24h Changes</span>
@@ -238,7 +238,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
                 
                 <li className='flex  flex-row items-center gap-52'>
                   <Link to={`/search/${coin.id}`}>
-                  <div  className='flex flex-row gap-2 w-[200px]'>
+                  <div  className='flex flex-row gap-2 w-[60px]'>
                     <img src={coin.image} width="50px" height="50px" alt="" />
                         <div className='flex w-[80px] flex-col' style={{
                             direction: 'ltr',
