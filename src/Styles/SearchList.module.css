@@ -1,0 +1,13 @@
+.header {
+    position: relative;
+    /* top: 3px; */
+    width: 100vw;
+    height: 450px;
+    padding: 0;
+    margin: 0;
+    
+    /* background-size: contain;  */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../assets/images/banner.jpg');
+}
