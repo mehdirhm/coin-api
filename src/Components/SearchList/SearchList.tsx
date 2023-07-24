@@ -38,7 +38,6 @@ const SearchList: FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState<Coin[]>();
   const [status, setStatus] = useState(false);
-  const [localStorageUpdate, setLocalStorageUpdate]: any = useState([]);
   const { theme } = useTheme();
 
   const handleSearch = (event: any) => {

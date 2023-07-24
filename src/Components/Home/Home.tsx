@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import styles from "../../Styles/Home.module.css";
 import Button from "../Button/Button";
 import { v4 as uuidv4 } from "uuid";
