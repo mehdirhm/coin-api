@@ -67,8 +67,6 @@ const CoinDetails: React.FC = () => {
     );
   }
 
-  // از coinId برای دریافت اطلاعات مربوط به کوین و نمایش آن‌ها استفاده کنید
-  // console.log(coinDetails)
   return (
     <div
       className="h-[100vh]"
@@ -111,14 +109,14 @@ const CoinDetails: React.FC = () => {
             style={{
               direction: "ltr",
             }}
-            className="flex justify-around p-4 flex-row mr-[150px]"
+            className="flex justify-around p-4 flex-row mr-[20px]"
           >
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex rounded-md flex-col justify-center gap-5 w-[300px] h-[150px] bg-[#ffc21b] items-center">
               <h1
                 style={{
                   color: theme === "light" ? "#3c0781e8" : "#ffffff",
                 }}
-                className="text-[#ffffff] text-[40px]"
+                className="text-[#ffffff] text-[30px]"
               >
                 Market Cap
               </h1>
@@ -132,12 +130,12 @@ const CoinDetails: React.FC = () => {
               </span>
             </div>
 
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex gap-5 rounded-md w-[200px] h-[150px] bg-[#ffc21b] flex-col justify-center items-center">
               <h1
                 style={{
                   color: theme === "light" ? "#3c0781e8" : "#ffffff",
                 }}
-                className="text-[#ffffff] text-[40px]"
+                className="text-[#ffffff] text-[30px]"
               >
                 Price
               </h1>
@@ -155,13 +153,13 @@ const CoinDetails: React.FC = () => {
               style={{
                 color: theme === "light" ? "#3c0781e8" : "#ffffff",
               }}
-              className="flex flex-col justify-center items-center"
+              className="flex w-[200px] gap-5  rounded-md bg-[#ffc21b] h-[150px] flex-col justify-center items-center"
             >
               <h1
                 style={{
                   color: theme === "light" ? "#3c0781e8" : "#ffffff",
                 }}
-                className="text-[#ffffff] text-[40px]"
+                className="text-[#ffffff] text-[30px]"
               >
                 Rank
               </h1>
