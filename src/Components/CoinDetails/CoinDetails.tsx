@@ -69,7 +69,7 @@ const CoinDetails: React.FC = () => {
 
   return (
     <div
-      className="h-[100vh]"
+      className="min-h-[100vh]"
       style={{
         backgroundColor: theme === "light" ? "#e3c1fef4" : "#282727",
       }}
@@ -168,7 +168,7 @@ const CoinDetails: React.FC = () => {
               </span>
             </div>
           </div>
-          <div className="flex flex-row w-[100vw]  justify-between p-2  relative mt-[400px] bottom-4">
+          <div className="flex flex-row w-[100vw]  justify-between p-2  relative mt-[150px] bottom-4">
             <Link to="/">
               <button className="bg-[#ffb812fa] font-bold flex text-[#fefefe] h-[50px] items-center shadow-lg justify-center rounded w-[150px]">
                 Home Page
