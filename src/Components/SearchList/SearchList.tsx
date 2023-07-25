@@ -36,8 +36,9 @@ const SearchList: FC = (): JSX.Element => {
         last_updated: string;
         }
     const [searchTerm, setSearchTerm] = useState('');
-    const [searchResults, setSearchResults] = useState<Coin[]>()
+    const [searchResults, setSearchResults] = useState<Coin[]>([])
     const [status, setStatus] = useState(false)
+    const [selectedItemIndex, setSelectedItemIndex] = useState(0);
     const { theme} = useTheme();
 
     const handleSearch = (event:any) => {
@@ -61,6 +62,27 @@ const SearchList: FC = (): JSX.Element => {
 
 
     }
+
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowUp') {
+        // Move to the previous item when pressing the up arrow key
+        setSelectedItemIndex((prevIndex) =>
+          prevIndex > 0 ? prevIndex - 1 : searchResults.length - 1
+        );
+      } else if (event.key === 'ArrowDown') {
+        // Move to the next item when pressing the down arrow key
+        setSelectedItemIndex((prevIndex) =>
+          prevIndex < searchResults.length - 1 ? prevIndex + 1 : 0
+        );
+      }
+    };
+
+    useEffect(() => {
+      window.addEventListener('keydown', handleKeyPress);
+      return () => {
+        window.removeEventListener('keydown', handleKeyPress);
+      };
+    }, [searchResults]);
 
     const handleEnter = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
@@ -233,11 +255,17 @@ const updateLocalStorage = (newResults: Coin[]) => {
                 </li>
 
 
-            {searchResults?.map((coin) => (
+            {searchResults?.map((coin, index) => (
                 <div key={uuidv4()} className='flex -mt-4 flex-col gap-2'>
 
                 
-                <li className='flex  flex-row items-center gap-52'>
+                <li onClick={() => setSelectedItemIndex(index)}  onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                setSelectedItemIndex(index);
+              }
+            }}
+            role='button'
+            tabIndex={0}            className={`flex flex-row items-center gap-52 ${index === selectedItemIndex ? 'bg-[#ffb812fa] rounded' : ''}`}>
                   <Link to={`/search/${coin.id}`}>
                   <div  className='flex flex-row gap-2 w-[180px] sm:w-[100px]'>
                     <img src={coin.image} width="50px" height="50px" alt="" />
