@@ -189,9 +189,9 @@ const updateLocalStorage = (newResults: Coin[]) => {
     <input placeholder='Serach' style={{
       backgroundColor: theme === 'light' ? '#e3c1fef4' : '#282727',
       color: theme === 'light' ? '#370061' : '#ffffff'
-    }} onChange={handleSearch} onKeyDown={handleEnter} className=' flex  justify-center  min-w-[1440px]  border bg-[#323232] text-[#ffffff] p-2 rounded sm:max-w-[390px]' type="text" name="" value={searchTerm} id="" />
+    }} onChange={handleSearch} onKeyDown={handleEnter} className=' flex sm  justify-center  w-[1440px]  border bg-[#323232] text-[#ffffff] p-2 rounded sm:max-w-[390px]' type="text" name="" value={searchTerm} id="" />
 <li className='flex p-2 sm:w-[390px] bg-[#ffc928]  flex-row items-center gap-52'>
-                     <div   className='flex flex-row gap-2 w-[180px] '>
+                     <div   className='flex flex-row gap-2 w-[180px] sm:w-[100px] '>
                     
                        <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
@@ -202,14 +202,14 @@ const updateLocalStorage = (newResults: Coin[]) => {
                     </div>
 
 
-                    <div className=' flex justify-center w-[300px]'>
+                    <div className=' flex justify-center w-[300px] sm:w-[80px]'>
                     <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
                     }} className='text-[#ffffff]'>Price</span>
 
                     </div>
 
-                    <div  className='flex justify-center  w-[200px]'>
+                    <div  className='flex sm:hidden justify-center  w-[200px]'>
                     <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
                     }} className='text-[#ffffff]'>24h Changes</span>
@@ -218,7 +218,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
                     </div>
 
 
-                    <div className='flex justify-center  w-[130px]'>
+                    <div className='flex sm:hidden justify-center  w-[130px]'>
                     <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
                     }} className='text-[#ffffff]'>Market Cap</span>
@@ -239,7 +239,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
                 
                 <li className='flex  flex-row items-center gap-52'>
                   <Link to={`/search/${coin.id}`}>
-                  <div  className='flex flex-row gap-2 w-[180px]'>
+                  <div  className='flex flex-row gap-2 w-[180px] sm:w-[100px]'>
                     <img src={coin.image} width="50px" height="50px" alt="" />
                         <div className='flex w-[80px] flex-col' style={{
                             direction: 'ltr',
@@ -260,7 +260,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
                      
 
 
-                    <div className='flex text-[#ffffff] justify-center w-[300px]'>
+                    <div className='flex text-[#ffffff] justify-center w-[300px] sm:w-[80px]'>
                     <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
                     }}>${coin.current_price}</span>
