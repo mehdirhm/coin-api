@@ -47,7 +47,7 @@ const SearchList: FC = (): JSX.Element => {
         setSearchTerm(event.target.value);
       
         const filteredCoins = searchResults?.filter((coin) =>
-      coin.name.toLowerCase().includes(searchTerm.toLowerCase())
+      coin.name.toLowerCase().includes(searchTerm.toLowerCase()) || coin.symbol.toLowerCase().includes(searchTerm.toLowerCase())
       
     );
     if(event.target.value === ''){
@@ -88,7 +88,7 @@ const SearchList: FC = (): JSX.Element => {
         if (event.key === 'Enter') {
         
             const exactMatch = searchResults?.find((coin) =>
-            coin.name.toLowerCase() === searchTerm.toLowerCase()
+            coin.name.toLowerCase() === searchTerm.toLowerCase() || coin.symbol.toLowerCase().includes(searchTerm.toLowerCase())
           );
     
           if (exactMatch) {
