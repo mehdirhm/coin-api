@@ -161,7 +161,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
     return (
         <div style={{
           backgroundColor: theme === 'light' ? '#e3c1fef4' : '#282727',
-        }} className='flex flex-col w-[100vw] min-h-[100vh]  items-center'>
+        }} className='flex flex-col w-[100vw] min-h-[100vh]   items-center'>
             <Header backColor='#e3c1fef4' color='#d7af00'/>
             <div className={`${styles.header} flex flex-col justify-center items-center gap-2`}>
               <div>
@@ -189,9 +189,9 @@ const updateLocalStorage = (newResults: Coin[]) => {
     <input placeholder='Serach' style={{
       backgroundColor: theme === 'light' ? '#e3c1fef4' : '#282727',
       color: theme === 'light' ? '#370061' : '#ffffff'
-    }} onChange={handleSearch} onKeyDown={handleEnter} className=' flex justify-center  min-w-[1320px] border bg-[#323232] text-[#ffffff] p-2 rounded' type="text" name="" value={searchTerm} id="" />
-<li className='flex p-2 bg-[#ffc928]  flex-row items-center gap-52'>
-                     <div   className='flex flex-row gap-2 w-[150px] '>
+    }} onChange={handleSearch} onKeyDown={handleEnter} className=' flex  justify-center  min-w-[1440px]  border bg-[#323232] text-[#ffffff] p-2 rounded sm:max-w-[390px]' type="text" name="" value={searchTerm} id="" />
+<li className='flex p-2 sm:w-[390px] bg-[#ffc928]  flex-row items-center gap-52'>
+                     <div   className='flex flex-row gap-2 w-[250px] '>
                     
                        <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
@@ -218,7 +218,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
                     </div>
 
 
-                    <div className='flex justify-center  w-[130px]'>
+                    <div className='flex justify-center  w-[150px]'>
                     <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
                     }} className='text-[#ffffff]'>Market Cap</span>
@@ -239,7 +239,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
                 
                 <li className='flex  flex-row items-center gap-52'>
                   <Link to={`/search/${coin.id}`}>
-                  <div  className='flex flex-row gap-2 w-[60px]'>
+                  <div  className='flex flex-row gap-2 w-[180px]'>
                     <img src={coin.image} width="50px" height="50px" alt="" />
                         <div className='flex w-[80px] flex-col' style={{
                             direction: 'ltr',
@@ -267,7 +267,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
 
                     </div>
 
-                    <div className=' w-[200px] flex justify-center'>
+                    <div className=' w-[200px] sm:hidden flex justify-center'>
                     <span style={{
                       color: coin.price_change_24h < 0 ? '#e80101':'#0f980a'
                     }}>{coin.price_change_24h}%</span>
@@ -276,7 +276,7 @@ const updateLocalStorage = (newResults: Coin[]) => {
                     </div>
 
 
-                    <div className=' w-[130px] text-[#ffffff] flex justify-center'>
+                    <div className=' w-[130px] sm:hidden  text-[#ffffff] flex justify-center'>
                     <span style={{
                       color: theme === 'light' ? '#490085' : '#ffffff'
                     }}>${coin.market_cap}</span>
